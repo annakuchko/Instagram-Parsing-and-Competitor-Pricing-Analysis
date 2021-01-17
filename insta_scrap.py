@@ -16,12 +16,10 @@ import pandas as pd
 start = "\033[1m"
 end = "\033[0;0m"
 
-supported_versions_path = [
-    'C:\\Users\\Asus\\Desktop\\chromedriver.exe'
-]
 username = str(input('Enter your username: '))
 password = str(input('Enter your password: '))
 hastag = '#'+str(input('Enter hashtag to search (without #): '))
+n_posts = int(input('Enter the number of posts to scrap: '))
 instagram_link = "https://www.instagram.com/accounts/login/?source=auth_switcher"
 
 opp = Options()
@@ -29,7 +27,7 @@ opp.add_argument('--blink-settings=imagesEnabled=false')
 #opp.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(
-    executable_path = 'C:\\Users\\Asus\\Desktop\\chromedriver.exe', 
+    executable_path = 'chromedriver.exe', 
     options=opp
 )            
 #open instagram login screen, insert username
@@ -78,7 +76,7 @@ WebDriverWait(driver, 20).until(
     ))
 ).click()
 
-for i in range(10000):
+for i in range(n_posts):
     print(start+str(i)+end)
     try:
         #locate and save user id
