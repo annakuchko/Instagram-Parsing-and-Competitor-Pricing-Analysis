@@ -1,1 +1,1 @@
-# Instagram-Parsing-and-Competitor-Pricing-Analysis-
+# Instagram Parsing and Competitor Pricing Analysis
