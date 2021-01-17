@@ -14,9 +14,6 @@ from selenium.webdriver.chrome.options import Options
 start = "\033[1m"
 end = "\033[0;0m"
 
-supported_versions_path = [
-    'C:\\Users\\Asus\\Desktop\\chromedriver.exe'
-]
 username = str(input('Enter your username: '))
 password = str(input('Enter your password: '))
 
@@ -27,7 +24,7 @@ opp.add_argument('--blink-settings=imagesEnabled=false')
 #opp.add_argument('--disable-gpu')
 
 driver = webdriver.Chrome(
-    executable_path = 'C:\\Users\\Asus\\Desktop\\chromedriver.exe'
+    executable_path = 'chromedriver.exe'
 )            
 #open instagram login screen, insert username
 driver.get(instagram_link)
